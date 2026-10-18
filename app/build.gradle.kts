@@ -41,7 +41,7 @@ val verName = "v6.0.1"
 
 android {
     namespace = "org.matrix.TEESimulator"
-    compileSdk = 36
+    compileSdk = 37
     ndkVersion = "27.3.13750724"
     buildToolsVersion = "36.0.0"
 
