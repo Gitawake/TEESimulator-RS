@@ -140,8 +140,8 @@ val refreshUpdateJson by
                 """{
   "version": "$fullVer",
   "versionCode": $capturedCount,
-  "zipUrl": "https://github.com/Enginex0/TEESimulator-RS/releases/download/$fullVer/TEESimulator-RS-$fullVer-Release.zip",
-  "changelog": "https://raw.githubusercontent.com/Enginex0/TEESimulator-RS/main/module/changelog.md"
+  "zipUrl": "https://github.com/Gitawake/TEESimulator-RS/releases/download/$fullVer/TEESimulator-RS-$fullVer-Release.zip",
+  "changelog": "https://raw.githubusercontent.com/Gitawake/TEESimulator-RS/main/module/changelog.md"
 }
 """
             )
