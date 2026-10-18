@@ -4,14 +4,14 @@
 - Keep compileSdk 36 and the existing build toolchain; no minimum or target SDK changes.
 - Based on Enginex0/TEESimulator-RS v6.0.1-307. Upstream fix PR: https://github.com/Enginex0/TEESimulator-RS/pull/69
 - An equivalent installed-DEX fix was tested on OnePlus 7T Pro / LineageOS 24.0 (20261016) / KernelSU Next 3.4.2. The user reported BASIC, DEVICE and STRONG passing after reboot. The full source-built ZIP is not yet device-tested; integrity results are not guaranteed on other configurations.
-- Release and Debug ZIPs use the upstream packaging tasks. This standalone TEESimulator-RS module is not an AlwaysStrong bundle; do not install both together. No keybox or private user configuration is included.
+- Release and Debug ZIPs use the upstream packaging tasks. This standalone TEESimulator-RS module is not an AlwaysStrong bundle; do not install both together. Only the upstream repository’s bundled keybox sample is retained; no device keybox or private user configuration is included.
 - Fork update links point to Gitawake; release numbering includes the existing versionCode floor offset.
 
 ### 中文
 
 - 修复 Android 17 证明版本错误回退到 Android 16；使用整数 SDK 映射，避免为一行修复升级编译工具链。
 - 本次发布为 Gitawake fork 构建，并非上游官方发布。完整源码编译包尚未实机安装；已验证的是此前手机上的等价 DEX 修复。
-- 单独的 TEE 模块，不是 AlwaysStrong 整合包，不应与 AlwaysStrong 同时安装；不包含密钥或私人配置。
+- 单独的 TEE 模块，不是 AlwaysStrong 整合包，不应与 AlwaysStrong 同时安装；仅保留上游仓库自带的 keybox 示例，不含手机私人密钥或配置。
 
 ---
 
