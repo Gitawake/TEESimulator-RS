@@ -37,7 +37,7 @@ jobs:
           log-accepted-android-sdk-licenses: false
 
       - name: Install Android platforms
-        run: sdkmanager "platforms;android-37.0" "platforms;android-36" "build-tools;36.0.0" "ndk;27.3.13750724"
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0" "ndk;27.3.13750724"
 
       - name: Setup Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -171,7 +171,7 @@ jobs:
           COUNT=$(( $(git rev-list HEAD --count) + OFFSET ))
           RELEASE_NAME=$(basename zips/*Release*.zip)
           ZIP_URL="https://github.com/${{ github.repository }}/releases/download/${VER}/${RELEASE_NAME}"
-          jq ".versionCode = $COUNT | .zipUrl = \"$ZIP_URL\"" module/update.json > /tmp/update.json
+          jq ".version = \"$VER\" | .versionCode = $COUNT | .zipUrl = \"$ZIP_URL\"" module/update.json > /tmp/update.json
           mv /tmp/update.json module/update.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
